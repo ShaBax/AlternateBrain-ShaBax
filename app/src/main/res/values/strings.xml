@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AlternateBrain</string>
+    <string name="add_new_str">
+        <b>Add New </b>  button to upload RECEIPTS, BILLS and FEE VOUCHERS
+    </string>
+
+    <string name="search">
+        <b>Filter </b> button. User can select date range
+    </string>
+
+    <string name="sort">
+        <b>Ascending/ Descending</b>  button
+    </string>
+    <string name="confirmation">Attention</string>
+    <string name="unsubscribe_message">Are you sure to unsubscribe the application</string>
+    <string name="delete_message">Are you sure to delete this record?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="date_text_estaric">Date <font fgcolor="red">*</font></string>
+
+</resources>

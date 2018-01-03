@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/dummylayout"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        android:background="@color/black_upcoming_game"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dummylayout"
+        android:layout_marginTop="25dp"
+        android:id="@+id/fragment_layout"
+        android:layout_above="@+id/dummmy">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/dummmy"
+        android:visibility="gone"
+        android:layout_above="@+id/bottomBar"
+        android:background="@color/black_upcoming_game"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+        <include
+            android:id="@+id/container_login_lyt"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/bottom_menu"/>
+    </RelativeLayout>
+
+</RelativeLayout>

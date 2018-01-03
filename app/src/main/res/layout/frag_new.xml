@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toplayout"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:paddingTop="10dp"
+        android:visibility="visible"
+        android:paddingRight="20dp"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/sort"
+            android:layout_centerVertical="true"
+            android:src="@drawable/filter"/>
+        <RelativeLayout
+            android:layout_width="5dp"
+            android:layout_height="35dp"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/search"
+            android:layout_toLeftOf="@+id/sort"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/searching_layout"
+        android:orientation="horizontal"
+        android:layout_below="@+id/toplayout"
+        android:visibility="gone"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/firstdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:drawableRight="@drawable/calendar"
+                    android:textColorHint="@color/navyBlue"
+                    android:gravity="center"
+                    android:text=""
+                    android:inputType="none"
+                    android:textIsSelectable="true"
+                    android:background="#00000000"
+                    android:hint="From"
+                    android:textColor="@color/lightBlack"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/navyBlue"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/seconddate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:text=""
+                    android:drawableRight="@drawable/calendar"
+                    android:textColorHint="@color/navyBlue"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:textIsSelectable="true"
+                    android:background="#00000000"
+                    android:hint="To"
+                    android:textColor="@color/lightBlack"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/navyBlue"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/right_arrow"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/right_arrow"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <dev.dworks.libs.astickyheader.ui.PinnedSectionGridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:visibility="visible"
+        android:layout_below="@+id/searching_layout"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:choiceMode="singleChoice"
+        android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:numColumns="auto_fit"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp" />
+</RelativeLayout>
